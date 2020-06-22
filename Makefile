@@ -2,13 +2,10 @@ prefix ?= /usr/local
 bindir = $(prefix)/bin
 
 build:
-	swift build -c release
+	swift build -c release --disable-sandbox
 
 install: build
 	install ".build/release/codegen" "$(bindir)"
-	install_name_tool -change \
-		"$(bindir)/codegen"
-
 uninstall:
 	rm -rf "$(bindir)/codegen"
 
