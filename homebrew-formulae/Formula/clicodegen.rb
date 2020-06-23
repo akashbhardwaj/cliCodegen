@@ -4,7 +4,7 @@
 class Clicodegen < Formula
   desc "cliCodegen is demo for parsing deign token from json"
   homepage "https://github.com/akashbhardwaj/cliCodegen"
-  url "https://github.com/akashbhardwaj/cliCodegen.git", :tag => "0.1.4"
+  url "https://github.com/akashbhardwaj/cliCodegen.git", :tag => "0.1.5"
   head "https://github.com/akashbhardwaj/cliCodegen.git"
   # depends_on "cmake" => :build
   depends_on "swift" => "5.1.0"
