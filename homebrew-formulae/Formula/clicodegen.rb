@@ -7,7 +7,7 @@ class Clicodegen < Formula
   url "https://github.com/akashbhardwaj/cliCodegen.git", :tag => "0.1.2"
   head "https://github.com/akashbhardwaj/cliCodegen.git"
   # depends_on "cmake" => :build
-  # depends_on :xcode => ["11.0", :build]
+  depends_on "swift" => "5.1.0"
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
@@ -16,7 +16,8 @@ class Clicodegen < Formula
     #                       "--disable-silent-rules",
     #                       "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
-    system "make", "install" , "prefix=#{prefix}"
+    system "echo", " pwd"
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
