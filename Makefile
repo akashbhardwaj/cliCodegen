@@ -10,7 +10,7 @@ build:
 
 install: build
 	echo "${bindir}"
-	install ".build/release/codegen" "$(bindir)"
+	install ".build/release/bin" "$(bindir)"
 	# echo "${bashPath}" >> "${bashProfilePath}"
 	echo ${bashAlias} >> ${bashProfilePath}
 	source ${bashProfilePath}
